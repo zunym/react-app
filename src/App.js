@@ -22,19 +22,20 @@ class App extends Component {
     //Ajax call here for api
     this.setState({
       chartData: {
-        labels: [
-          "Boston",
-          "Worcester",
-          "Springfield",
-          "Lowell",
-          "Cambridge",
-          "New Bedford"
+        labels: [  //temp 
+          "T58",
+          "T60",
+          "T203",
+          "T02",
+          "T09",
+          "T11"
         ],
         datasets: [
           {
-            label: "Populations ",
+            label: "Temperature ",
             //main out components passing it to the Properties and back in to state
-            data: [617594, 181045, 153060, 106519, 105162, 95072],
+           
+            data: [60, 63, 33, 12, 56, 72],  //temp 
             backgroundColor: [
               "rgba(255,99,132,0.6)",
               "rgba(54,162,235,0.6)",
@@ -52,13 +53,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
+
         <Chart
           chartData={this.state.chartData}
-          location="Massachusetts"
+          location="Test Floor"
           legendPosition="bottom"
         ></Chart>
       </div>
