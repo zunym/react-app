@@ -33,7 +33,7 @@ class Chart extends Component {
             title: { //Bar Chart Implemented
               display: this.props.displayTitle,
               text: "Systems In " + this.props.location,
-              fontSize: 25
+              fontSize: 25,
             },
             legend: {
               display: this.props.displayLegend,
@@ -111,6 +111,58 @@ class Chart extends Component {
             }
           }} //maintainAspectRatio: false
         ></Line>
+        <Scatter
+          data={{
+            datasets: [{
+              label: 'Scatter Dataset',
+              data: [
+                { x: 60, y: 58},
+                { x: 63, y: 60},
+                { x: 33, y: 203},
+                { x: 12, y: 20},
+                { x: 56, y: 90},
+                { x: 72, y: 11},
+                { x: 68, y: 70},
+                { x: 62, y: 40},
+                { x: 30, y: 23},
+                { x: 10, y: 21},
+                { x: 46, y: 89},
+                { x: 78, y: 61},
+              ]
+          }]
+          }}
+          options={{
+            title: { //Line Chart Implemented
+              display: this.props.displayTitle,
+              text: "Systems In " + this.props.location,
+              fontSize: 25
+            },
+            legend: {
+              display: this.props.displayLegend,
+              position: this.props.legendPosition,
+              labels: {
+                fontColor: "#000"
+              }
+            },
+            scales: {
+              xAxes: [{
+                  type: 'linear',
+                  position: 'bottom'
+              }]
+          },
+            layout: {
+              padding: {
+                left: 50,
+                right: 50,
+                bottom: 0,
+                top: 0
+              }
+            },
+            tooltips: {
+              enabled: true
+            }
+          }} //maintainAspectRatio: false
+        ></ Scatter>
         <Pie
           data={this.state.chartData}
           options={{
@@ -195,74 +247,7 @@ class Chart extends Component {
             }
           }} //maintainAspectRatio: false
         ></Polar>
-        <Scatter
-          data={this.state.chartData}
-          options={{
-            title: { //Scatter Chart Implemented
-              display: this.props.displayTitle,
-              text: "Systems In " + this.props.location,
-              fontSize: 25
-            },
-            legend: {
-              display: this.props.displayLegend,
-              position: this.props.legendPosition,
-              labels: {
-                fontColor: "#000"
-              }
-            },
-            axisX: {
-              title:"Temperature (in °C)",
-              suffix: "°C",
-              crosshair: {
-                enabled: true,
-                snapToDataPoint: true
-              }
-            },
-            axisY:{
-              title: "Sales",
-              includeZero: false,
-              crosshair: {
-                enabled: true,
-                snapToDataPoint: true
-              }
-            },
-            data: [{
-              type: "scatter",
-              markerSize: 15,
-              toolTipContent: "<b>Temperature: </b>{x}°C<br/><b>Sales: </b>{y}",
-              dataPoints: [
-                { x: 14.2, y: 215},
-                { x: 12.9, y: 175},
-                { x: 16.4, y: 325},
-                { x: 26.9, y: 635},
-                { x: 32.5, y: 464},
-                { x: 22.1, y: 522},
-                { x: 19.4, y: 412},
-                { x: 25.1, y: 614},
-                { x: 34.9, y: 374},
-                { x: 28.7, y: 625},
-                { x: 23.4, y: 544},
-                { x: 31.4, y: 502},
-                { x: 40.8, y: 262},
-                { x: 37.4, y: 312},
-                { x: 42.3, y: 202},
-                { x: 39.1, y: 302},
-                { x: 17.2, y: 408}
-              ]
-            }],
-            layout: {
-              padding: {
-                left: 50,
-                right: 50,
-                bottom: 0,
-                top: 0
-              }
-            },
-            tooltips: {
-              enabled: true
-            }
-          }} //maintainAspectRatio: false
-        ></Scatter>
+
       </div>
     );
   }
@@ -271,5 +256,5 @@ class Chart extends Component {
 export default Chart;
 
 //Scatter Plot
-//csv
+//csv + table
 //api + server

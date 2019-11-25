@@ -36,6 +36,7 @@ class App extends Component {
             //main out components passing it to the Properties and back in to state
            
             data: [60, 63, 33, 12, 56, 72],  //temp 
+            
             backgroundColor: [
               "rgba(255,99,132,0.6)",
               "rgba(54,162,235,0.6)",
