@@ -66,3 +66,16 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+### Features
+
+Bar, Line, Pie, Doughnut, HorizontalBar, Polar, Scatter, Table
+
+### Data Vistualization
+
+1> Load csv => Table, Bar, Line, Pie, Doughnut, HorizontalBar, Polar, Scatter
+
+2> Local(MYSQL DB) => Table, Bar, Line, Pie, Doughnut, HorizontalBar, Polar, Scatter
+
+3> API(Stela) => Table, Bar, Line, Pie, Doughnut, HorizontalBar, Polar, Scatter
