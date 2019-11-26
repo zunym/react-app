@@ -21,6 +21,32 @@ class App extends Component {
   getChartData() {
     //Ajax call here for api
     this.setState({
+      ScatterData: {
+        datasets: [
+          {
+            //temp 
+            label: 'Temperature',
+            data: [
+              { x: 60, y: 58 },
+              { x: 63, y: 60 },
+              { x: 33, y: 203 },
+              { x: 12, y: 20 },
+              { x: 56, y: 90 },
+              { x: 72, y: 11 },
+            ],
+
+            backgroundColor: [
+              "rgba(255,99,132,0.6)",
+              "rgba(54,162,235,0.6)",
+              "rgba(255,206,86,0.6)",
+              "rgba(75,192,192,0.6)",
+              "rgba(153,102,255,0.6)",
+              "rgba(255,159,64,0.6)",
+              "rgba(255,99,132,0.6)"
+            ]
+          }
+        ]
+      },
       chartData: {
         labels: [  //temp 
           "T58",
@@ -34,9 +60,9 @@ class App extends Component {
           {
             label: "Temperature ",
             //main out components passing it to the Properties and back in to state
-           
+
             data: [60, 63, 33, 12, 56, 72],  //temp 
-            
+
             backgroundColor: [
               "rgba(255,99,132,0.6)",
               "rgba(54,162,235,0.6)",
@@ -48,7 +74,8 @@ class App extends Component {
             ]
           }
         ]
-      }
+      },
+
     });
   }
   render() {
@@ -56,6 +83,7 @@ class App extends Component {
       <div className="App">
 
         <Chart
+          ScatterData={this.state.ScatterData}
           chartData={this.state.chartData}
           location="Test Floor"
           legendPosition="bottom"
