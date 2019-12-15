@@ -79,3 +79,4 @@ Bar, Line, Pie, Doughnut, HorizontalBar, Polar, Scatter, Table
 2> Local(MYSQL DB) => Table, Bar, Line, Pie, Doughnut, HorizontalBar, Polar, Scatter
 
 3> API(Stela) => Table, Bar, Line, Pie, Doughnut, HorizontalBar, Polar, Scatter
+# react-app
