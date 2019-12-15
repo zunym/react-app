@@ -1,0 +1,8 @@
+{
+  "host": "9.56.197.146",
+  "port": 3306,
+  "user": "stelacmduser",
+  "password": "",
+  "database": "stela_zlab",
+  "connectionLimit": 4
+}

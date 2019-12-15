@@ -1,9 +1,16 @@
 import React, { Component } from "react";
-import { Bar, Line, Pie, Doughnut, HorizontalBar, Polar, Scatter } from "react-chartjs-2";
+import {
+  Bar,
+  Line,
+  Pie,
+  Doughnut,
+  HorizontalBar,
+  Polar,
+  Scatter
+} from "react-chartjs-2";
 
 //Component Class extend Component
 class Chart extends Component {
-
   //create state is keeping all of the data
   constructor(props) {
     //It will run when component is Initialized
@@ -25,16 +32,16 @@ class Chart extends Component {
   //render method is output to screen
   render() {
     return (
-
       //JSS [=HTML] Pretty much using classname
       <div className="chart">
         <Scatter
           data={this.state.ScatterData}
           options={{
-            title: { //Scatter Plot Implemented
+            title: {
+              //Scatter Plot Implemented
               display: this.props.displayTitle,
               text: "Systems In " + this.props.location,
-              fontSize: 25,
+              fontSize: 25
             },
             legend: {
               display: this.props.displayLegend,
@@ -53,7 +60,7 @@ class Chart extends Component {
             },
             tooltips: {
               enabled: true
-            },
+            }
             // scales: {
             //   xAxes: [{
             //       type: 'linear',
@@ -61,15 +68,16 @@ class Chart extends Component {
             //   }]
             // },
           }} //maintainAspectRatio: false
-        ></ Scatter>
+        ></Scatter>
 
         <Bar
           data={this.state.chartData}
           options={{
-            title: { //Bar Chart Implemented
+            title: {
+              //Bar Chart Implemented
               display: this.props.displayTitle,
               text: "Systems In " + this.props.location,
-              fontSize: 25,
+              fontSize: 25
             },
             legend: {
               display: this.props.displayLegend,
@@ -95,7 +103,8 @@ class Chart extends Component {
         <HorizontalBar
           data={this.state.chartData}
           options={{
-            title: { //HorizontalBar Chart Implemented
+            title: {
+              //HorizontalBar Chart Implemented
               display: this.props.displayTitle,
               text: "Systems In " + this.props.location,
               fontSize: 25
@@ -124,7 +133,8 @@ class Chart extends Component {
         <Line
           data={this.state.chartData}
           options={{
-            title: { //Line Chart Implemented
+            title: {
+              //Line Chart Implemented
               display: this.props.displayTitle,
               text: "Systems In " + this.props.location,
               fontSize: 25
@@ -153,7 +163,8 @@ class Chart extends Component {
         <Pie
           data={this.state.chartData}
           options={{
-            title: { //Pie Chart Implemented
+            title: {
+              //Pie Chart Implemented
               display: this.props.displayTitle,
               text: "Systems In " + this.props.location,
               fontSize: 25
@@ -178,11 +189,12 @@ class Chart extends Component {
             }
           }} //maintainAspectRatio: false
         ></Pie>
-        
+
         <Doughnut
           data={this.state.chartData}
           options={{
-            title: {//Doughnut Chart Implemented
+            title: {
+              //Doughnut Chart Implemented
               display: this.props.displayTitle,
               text: "Systems In " + this.props.location,
               fontSize: 25
@@ -210,7 +222,8 @@ class Chart extends Component {
         <Polar
           data={this.state.chartData}
           options={{
-            title: { //Polar Chart Implemented
+            title: {
+              //Polar Chart Implemented
               display: this.props.displayTitle,
               text: "Systems In " + this.props.location,
               fontSize: 25
@@ -235,7 +248,6 @@ class Chart extends Component {
             }
           }} //maintainAspectRatio: false
         ></Polar>
-
       </div>
     );
   }
